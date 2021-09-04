@@ -1,8 +1,0 @@
-{
-  "runtimeOptions": {
-    "additionalProbingPaths": [
-      "/home/ssoysal/.dotnet/store/|arch|/|tfm|",
-      "/home/ssoysal/.nuget/packages"
-    ]
-  }
-}
