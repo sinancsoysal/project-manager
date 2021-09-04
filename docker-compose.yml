@@ -1,0 +1,30 @@
+version: '3.4'
+ 
+services:
+ 
+  postgresql_database:
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=bQ8tbngMRVrJEf9d
+      - POSTGRES_DB=projects
+    ports:
+      - "5432:5432"
+    restart: always
+    volumes:
+      - database-data:/var/lib/postgresql/data/
+     
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=amdin@projects.com
+      - PGADMIN_DEFAULT_PASSWORD=aski1029
+    ports:
+      - "5050:80"
+    restart: always
+    volumes:
+      - pgadmin:/root/.pgadmin
+ 
+volumes:
+  database-data:
+  pgadmin:
